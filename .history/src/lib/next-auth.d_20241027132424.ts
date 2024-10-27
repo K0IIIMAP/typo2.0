@@ -1,0 +1,12 @@
+// next-auth.d.ts
+
+declare module "next-auth" {
+  interface User {
+    email: string;
+    challengesCompleted: number; // Add any additional properties you need
+  }
+
+  interface Session {
+    user: User;
+  }
+}
